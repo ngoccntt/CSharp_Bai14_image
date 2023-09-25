@@ -28,22 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txtMessage = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtMessage = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radRed = new System.Windows.Forms.RadioButton();
-            this.radGreen = new System.Windows.Forms.RadioButton();
-            this.radBlack = new System.Windows.Forms.RadioButton();
             this.radBlue = new System.Windows.Forms.RadioButton();
+            this.radBlack = new System.Windows.Forms.RadioButton();
+            this.radGreen = new System.Windows.Forms.RadioButton();
+            this.radRed = new System.Windows.Forms.RadioButton();
             this.chkVisible = new System.Windows.Forms.CheckBox();
             this.picSmall = new System.Windows.Forms.PictureBox();
             this.picBig = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnClear = new System.Windows.Forms.Button();
             this.btnDisplay = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.lblMessage = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picSmall)).BeginInit();
@@ -67,15 +71,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Input Name & Message";
             // 
-            // label1
+            // txtMessage
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(28, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 21);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Name:";
+            this.txtMessage.Location = new System.Drawing.Point(127, 71);
+            this.txtMessage.Name = "txtMessage";
+            this.txtMessage.Size = new System.Drawing.Size(247, 25);
+            this.txtMessage.TabIndex = 4;
+            this.txtMessage.TextChanged += new System.EventHandler(this.txtMessage_TextChanged);
             // 
             // txtName
             // 
@@ -91,19 +93,22 @@
             this.label2.Location = new System.Drawing.Point(28, 75);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 21);
-            this.label2.TabIndex = 1;
+            this.label2.TabIndex = 3;
             this.label2.Text = "Message:";
             // 
-            // txtMessage
+            // label1
             // 
-            this.txtMessage.Location = new System.Drawing.Point(127, 71);
-            this.txtMessage.Name = "txtMessage";
-            this.txtMessage.Size = new System.Drawing.Size(247, 25);
-            this.txtMessage.TabIndex = 3;
-            this.txtMessage.TextChanged += new System.EventHandler(this.txtMessage_TextChanged);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(28, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(57, 21);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Name:";
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.groupBox2.Controls.Add(this.radBlue);
             this.groupBox2.Controls.Add(this.radBlack);
             this.groupBox2.Controls.Add(this.radGreen);
@@ -112,48 +117,9 @@
             this.groupBox2.Location = new System.Drawing.Point(14, 169);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(181, 221);
-            this.groupBox2.TabIndex = 4;
+            this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Color";
-            // 
-            // radRed
-            // 
-            this.radRed.AutoSize = true;
-            this.radRed.ForeColor = System.Drawing.Color.Red;
-            this.radRed.Location = new System.Drawing.Point(32, 31);
-            this.radRed.Name = "radRed";
-            this.radRed.Size = new System.Drawing.Size(61, 27);
-            this.radRed.TabIndex = 5;
-            this.radRed.TabStop = true;
-            this.radRed.Text = "Red";
-            this.radRed.UseVisualStyleBackColor = true;
-            this.radRed.CheckedChanged += new System.EventHandler(this.radRed_CheckedChanged);
-            // 
-            // radGreen
-            // 
-            this.radGreen.AutoSize = true;
-            this.radGreen.ForeColor = System.Drawing.Color.Lime;
-            this.radGreen.Location = new System.Drawing.Point(32, 81);
-            this.radGreen.Name = "radGreen";
-            this.radGreen.Size = new System.Drawing.Size(78, 27);
-            this.radGreen.TabIndex = 5;
-            this.radGreen.TabStop = true;
-            this.radGreen.Text = "Green";
-            this.radGreen.UseVisualStyleBackColor = true;
-            this.radGreen.CheckedChanged += new System.EventHandler(this.radRed_CheckedChanged);
-            // 
-            // radBlack
-            // 
-            this.radBlack.AutoSize = true;
-            this.radBlack.ForeColor = System.Drawing.Color.Black;
-            this.radBlack.Location = new System.Drawing.Point(32, 177);
-            this.radBlack.Name = "radBlack";
-            this.radBlack.Size = new System.Drawing.Size(76, 27);
-            this.radBlack.TabIndex = 5;
-            this.radBlack.TabStop = true;
-            this.radBlack.Text = "Black";
-            this.radBlack.UseVisualStyleBackColor = true;
-            this.radBlack.CheckedChanged += new System.EventHandler(this.radRed_CheckedChanged);
             // 
             // radBlue
             // 
@@ -162,11 +128,50 @@
             this.radBlue.Location = new System.Drawing.Point(32, 131);
             this.radBlue.Name = "radBlue";
             this.radBlue.Size = new System.Drawing.Size(68, 27);
-            this.radBlue.TabIndex = 5;
+            this.radBlue.TabIndex = 8;
             this.radBlue.TabStop = true;
             this.radBlue.Text = "Blue";
             this.radBlue.UseVisualStyleBackColor = true;
             this.radBlue.CheckedChanged += new System.EventHandler(this.radRed_CheckedChanged);
+            // 
+            // radBlack
+            // 
+            this.radBlack.AutoSize = true;
+            this.radBlack.ForeColor = System.Drawing.Color.Black;
+            this.radBlack.Location = new System.Drawing.Point(32, 177);
+            this.radBlack.Name = "radBlack";
+            this.radBlack.Size = new System.Drawing.Size(76, 27);
+            this.radBlack.TabIndex = 9;
+            this.radBlack.TabStop = true;
+            this.radBlack.Text = "Black";
+            this.radBlack.UseVisualStyleBackColor = true;
+            this.radBlack.CheckedChanged += new System.EventHandler(this.radRed_CheckedChanged);
+            // 
+            // radGreen
+            // 
+            this.radGreen.AutoSize = true;
+            this.radGreen.ForeColor = System.Drawing.Color.Lime;
+            this.radGreen.Location = new System.Drawing.Point(32, 81);
+            this.radGreen.Name = "radGreen";
+            this.radGreen.Size = new System.Drawing.Size(78, 27);
+            this.radGreen.TabIndex = 7;
+            this.radGreen.TabStop = true;
+            this.radGreen.Text = "Green";
+            this.radGreen.UseVisualStyleBackColor = true;
+            this.radGreen.CheckedChanged += new System.EventHandler(this.radRed_CheckedChanged);
+            // 
+            // radRed
+            // 
+            this.radRed.AutoSize = true;
+            this.radRed.ForeColor = System.Drawing.Color.Red;
+            this.radRed.Location = new System.Drawing.Point(32, 31);
+            this.radRed.Name = "radRed";
+            this.radRed.Size = new System.Drawing.Size(61, 27);
+            this.radRed.TabIndex = 6;
+            this.radRed.TabStop = true;
+            this.radRed.Text = "Red";
+            this.radRed.UseVisualStyleBackColor = true;
+            this.radRed.CheckedChanged += new System.EventHandler(this.radRed_CheckedChanged);
             // 
             // chkVisible
             // 
@@ -175,9 +180,10 @@
             this.chkVisible.Location = new System.Drawing.Point(210, 158);
             this.chkVisible.Name = "chkVisible";
             this.chkVisible.Size = new System.Drawing.Size(126, 23);
-            this.chkVisible.TabIndex = 6;
+            this.chkVisible.TabIndex = 10;
             this.chkVisible.Text = "Message Visible";
             this.chkVisible.UseVisualStyleBackColor = true;
+            this.chkVisible.CheckedChanged += new System.EventHandler(this.chkVisible_CheckedChanged);
             // 
             // picSmall
             // 
@@ -187,6 +193,8 @@
             this.picSmall.Size = new System.Drawing.Size(118, 94);
             this.picSmall.TabIndex = 5;
             this.picSmall.TabStop = false;
+            this.picSmall.Click += new System.EventHandler(this.picSmall_Click);
+            this.picSmall.MouseHover += new System.EventHandler(this.picSmall_MouseHover);
             // 
             // picBig
             // 
@@ -196,42 +204,71 @@
             this.picBig.Size = new System.Drawing.Size(118, 94);
             this.picBig.TabIndex = 5;
             this.picBig.TabStop = false;
+            this.picBig.Click += new System.EventHandler(this.picBig_Click);
+            this.picBig.MouseHover += new System.EventHandler(this.picBig_MouseHover);
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.button1);
+            this.groupBox3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.groupBox3.Controls.Add(this.btnExit);
+            this.groupBox3.Controls.Add(this.btnClear);
             this.groupBox3.Controls.Add(this.btnDisplay);
             this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(348, 169);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(130, 220);
-            this.groupBox3.TabIndex = 7;
+            this.groupBox3.Size = new System.Drawing.Size(175, 220);
+            this.groupBox3.TabIndex = 11;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Action";
             // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(39, 93);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(101, 41);
+            this.btnClear.TabIndex = 13;
+            this.btnClear.Text = "&Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
             // btnDisplay
             // 
-            this.btnDisplay.Location = new System.Drawing.Point(21, 28);
+            this.btnDisplay.Location = new System.Drawing.Point(39, 28);
             this.btnDisplay.Name = "btnDisplay";
             this.btnDisplay.Size = new System.Drawing.Size(101, 41);
-            this.btnDisplay.TabIndex = 0;
+            this.btnDisplay.TabIndex = 12;
             this.btnDisplay.Text = "&Display";
             this.btnDisplay.UseVisualStyleBackColor = true;
+            this.btnDisplay.Click += new System.EventHandler(this.btnDisplay_Click);
             // 
-            // button1
+            // btnExit
             // 
-            this.button1.Location = new System.Drawing.Point(21, 93);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(101, 41);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "&Display";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnExit.Location = new System.Drawing.Point(39, 163);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(101, 41);
+            this.btnExit.TabIndex = 14;
+            this.btnExit.Text = "E&xit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // lblMessage
+            // 
+            this.lblMessage.BackColor = System.Drawing.Color.MistyRose;
+            this.lblMessage.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMessage.Location = new System.Drawing.Point(1, 414);
+            this.lblMessage.Name = "lblMessage";
+            this.lblMessage.Size = new System.Drawing.Size(532, 69);
+            this.lblMessage.TabIndex = 12;
             // 
             // Form1
             // 
+            this.AcceptButton = this.btnDisplay;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 519);
+            this.CancelButton = this.btnExit;
+            this.ClientSize = new System.Drawing.Size(537, 481);
+            this.Controls.Add(this.lblMessage);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.chkVisible);
             this.Controls.Add(this.picBig);
@@ -270,8 +307,11 @@
         private System.Windows.Forms.CheckBox chkVisible;
         private System.Windows.Forms.PictureBox picBig;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnDisplay;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Label lblMessage;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 
